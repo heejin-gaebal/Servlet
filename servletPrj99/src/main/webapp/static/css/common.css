@@ -1,0 +1,24 @@
+body,h1{margin: 0; padding: 0;}
+header,footer{height: 15vh;}
+main{height: 70vh;}
+
+header  h1 {text-align:center;}
+header > div:first-child {
+	display:grid;
+	grid-template-columns: 2fr 6fr 2fr;
+	grid-template-rows: 1fr;
+}
+#login-area form{
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+}
+header a{text-decoration: none;display: block;text-align: center; color: #000;}
+header > nav {
+	display:flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 80vw; margin:auto; font-size: 32px;
+	background:#ff9cbc; 
+}
+header > nav a{color: #fff;}
