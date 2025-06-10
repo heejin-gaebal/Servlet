@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+  <settings>
+  	<setting name="mapUnderscoreToCamelCase" value="true"/>
+  </settings>
+  
+  <environments default="development">
+    
+    <environment id="development">
+      
+      <transactionManager type="JDBC"/>
+      <!-- POOLED : connection pool 커넥션을 가져다쓰고 다시 반납한다 -->
+      <dataSource type="POOLED">
+        <property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@192.168.20.213:1521:xe"/>
+        <property name="username" value="C##KH"/>
+        <property name="password" value="1234"/>
+      </dataSource>
+    
+    </environment>
+  
+  </environments>
+  <mappers><!-- *-Mapper.xml : *을 와일드카드로 사용해서 파일명 바꾸면서 사용할 수 있음 -->
+    <mapper resource="/mapper/board-mapper.xml"/>
+    <mapper resource="/mapper/member-mapper.xml"/>
+  </mappers>
+</configuration>
